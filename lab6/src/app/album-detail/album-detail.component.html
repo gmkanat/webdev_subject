@@ -1,0 +1,8 @@
+<h1>Album number {{album.id}}</h1>
+<h3>From user {{album.userId}}</h3>
+<p>{{album.title}}</p>
+<button class="btn btn-success" (click)="this.location.back()">Go Back</button>
+<br><br>
+<input type="text" [(ngModel)]="album.title" placeholder="change name">
+<button class="btn btn-primary" (click)="updateAlbum()">Update</button><br>
+<a [routerLink]="['/album', album.id, 'photos']">See photos</a>

@@ -1,0 +1,17 @@
+<button (click)="this.location.back()">Go Back</button>
+<h1>Album: {{photos[0].albumId}}</h1>
+<br>
+<ul>
+    <li *ngFor="let photo of photos">
+        <div class="text">
+            <h5>{{photo.id}})</h5>
+            <img [src]="photo.thumbnailUrl" alt="">
+        </div>
+        <div class="info">
+            <p>{{photo.title}}</p>
+        <b>link: </b> <a href="{{photo.url}}">{{photo.url}}</a>
+    
+        </div>
+        
+    </li>
+</ul>
